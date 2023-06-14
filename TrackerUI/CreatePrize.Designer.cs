@@ -38,6 +38,7 @@
             this.prizePercentageLabel = new System.Windows.Forms.Label();
             this.prizePercentageValue = new System.Windows.Forms.TextBox();
             this.orLabel = new System.Windows.Forms.Label();
+            this.createPrizeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // placeNumberValue
@@ -134,12 +135,23 @@
             this.orLabel.TabIndex = 19;
             this.orLabel.Text = "-OR-";
             // 
+            // createPrizeButton
+            // 
+            this.createPrizeButton.Location = new System.Drawing.Point(183, 484);
+            this.createPrizeButton.Name = "createPrizeButton";
+            this.createPrizeButton.Size = new System.Drawing.Size(191, 53);
+            this.createPrizeButton.TabIndex = 21;
+            this.createPrizeButton.Text = "Create Prize";
+            this.createPrizeButton.UseVisualStyleBackColor = true;
+            this.createPrizeButton.Click += new System.EventHandler(this.addTeamMemberButton_Click);
+            // 
             // CreatePrize
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1467, 831);
+            this.ClientSize = new System.Drawing.Size(562, 623);
+            this.Controls.Add(this.createPrizeButton);
             this.Controls.Add(this.orLabel);
             this.Controls.Add(this.prizePercentageValue);
             this.Controls.Add(this.prizePercentageLabel);
@@ -151,7 +163,7 @@
             this.Controls.Add(this.placeNumberLabel);
             this.Controls.Add(this.prizeLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "CreatePrize";
             this.Text = "Create Prize ";
             this.ResumeLayout(false);
@@ -171,5 +183,6 @@
         private System.Windows.Forms.Label prizePercentageLabel;
         private System.Windows.Forms.TextBox prizePercentageValue;
         private System.Windows.Forms.Label orLabel;
+        private System.Windows.Forms.Button createPrizeButton;
     }
 }
