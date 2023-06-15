@@ -11,6 +11,13 @@ namespace TrackerLibrary
     /// </summary>
     public class PrizeModel
     {
+
+        /// <summary>
+        /// unique identifier for prize
+        /// </summary>
+        public int Id { get; set; }
+
+
         /// <summary>
         /// place of team in tournament
         /// </summary>
