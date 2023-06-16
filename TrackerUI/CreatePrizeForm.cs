@@ -77,5 +77,10 @@ namespace TrackerUI
 
             return output;
         }
+
+        private void CreatePrizeForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
