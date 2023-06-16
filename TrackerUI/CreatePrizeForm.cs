@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -25,9 +26,17 @@ namespace TrackerUI
                 PrizeModel model = new PrizeModel(
                     placeNameValue.Text, 
                     placeNumberValue.Text, 
-                    placeAmountValue.Text, 
+                    prizeAmountValue.Text, 
                     prizePercentageValue.Text);
 
+                foreach (IDataConnection db in GlobalConfig.Connections)
+                {
+                    db.CreatePrize(model);
+                }
+            }
+            else
+            {
+                MessageBox.Show("This form has invalid info. Try again.")
             }
         }
 
@@ -40,7 +49,6 @@ namespace TrackerUI
             if (!placeNumberValidNumber)
             {
                 output = false;
-
             }
 
             if (placeNumber < 1)
@@ -51,7 +59,6 @@ namespace TrackerUI
             if (placeNameValue.Text.Length == 0)
             {
                 output = false;
-
             }
 
             decimal prizeAmount = 0;
@@ -74,7 +81,6 @@ namespace TrackerUI
             {
                 output = false;
             }
-
 
             return output;
         }
