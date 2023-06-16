@@ -22,10 +22,11 @@ namespace TrackerUI
         {
             if (ValidateForm())
             {
-                PrizeModel model = new PrizeModel();
-
-                model.PlaceName = placeNameValue.Text;
-                model.PlaceNumber = placeNumberValue.Text;
+                PrizeModel model = new PrizeModel(
+                    placeNameValue.Text, 
+                    placeNumberValue.Text, 
+                    placeAmountValue.Text, 
+                    prizePercentageValue.Text);
 
             }
         }
