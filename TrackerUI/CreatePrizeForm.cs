@@ -36,7 +36,7 @@ namespace TrackerUI
             }
             else
             {
-                MessageBox.Show("This form has invalid info. Try again.")
+                MessageBox.Show("This form has invalid info. Try again.");
             }
         }
 
@@ -86,6 +86,11 @@ namespace TrackerUI
         }
 
         private void CreatePrizeForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void prizeAmountValue_TextChanged(object sender, EventArgs e)
         {
 
         }
