@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace TrackerLibrary
 {
-    public class SqlConnector : IDataConnection
+    public class TextConnector : IDataConnection
     {
-        /// <summary>
-        /// saves a new prize to the database
-        /// </summary>
         public PrizeModel CreatePrize(PrizeModel model)
         {
             //throw new NotImplementedException();
+
+            // TODO wire up the CreatePrize for text files
+
             model.Id = 1;
+
             return model;
+
         }
     }
 }

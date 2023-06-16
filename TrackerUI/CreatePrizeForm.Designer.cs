@@ -1,6 +1,6 @@
 ﻿namespace TrackerUI
 {
-    partial class CreatePrize
+    partial class CreatePrizeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -143,9 +143,9 @@
             this.createPrizeButton.TabIndex = 21;
             this.createPrizeButton.Text = "Create Prize";
             this.createPrizeButton.UseVisualStyleBackColor = true;
-            this.createPrizeButton.Click += new System.EventHandler(this.addTeamMemberButton_Click);
+            this.createPrizeButton.Click += new System.EventHandler(this.createPrizeButton_Click);
             // 
-            // CreatePrize
+            // CreatePrizeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -164,7 +164,7 @@
             this.Controls.Add(this.prizeLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "CreatePrize";
+            this.Name = "CreatePrizeForm";
             this.Text = "Create Prize ";
             this.ResumeLayout(false);
             this.PerformLayout();
