@@ -213,7 +213,7 @@
             // teamMembersLabel
             // 
             this.teamMembersLabel.AutoSize = true;
-            this.teamMembersLabel.Location = new System.Drawing.Point(473, 87);
+            this.teamMembersLabel.Location = new System.Drawing.Point(531, 74);
             this.teamMembersLabel.Name = "teamMembersLabel";
             this.teamMembersLabel.Size = new System.Drawing.Size(140, 25);
             this.teamMembersLabel.TabIndex = 21;
@@ -223,14 +223,14 @@
             // 
             this.teamMembersListBox.FormattingEnabled = true;
             this.teamMembersListBox.ItemHeight = 25;
-            this.teamMembersListBox.Location = new System.Drawing.Point(478, 115);
+            this.teamMembersListBox.Location = new System.Drawing.Point(536, 102);
             this.teamMembersListBox.Name = "teamMembersListBox";
-            this.teamMembersListBox.Size = new System.Drawing.Size(260, 404);
+            this.teamMembersListBox.Size = new System.Drawing.Size(482, 404);
             this.teamMembersListBox.TabIndex = 20;
             // 
             // deleteTeamMemberButton
             // 
-            this.deleteTeamMemberButton.Location = new System.Drawing.Point(632, 525);
+            this.deleteTeamMemberButton.Location = new System.Drawing.Point(715, 512);
             this.deleteTeamMemberButton.Name = "deleteTeamMemberButton";
             this.deleteTeamMemberButton.Size = new System.Drawing.Size(106, 79);
             this.deleteTeamMemberButton.TabIndex = 22;
@@ -242,7 +242,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(790, 666);
+            this.ClientSize = new System.Drawing.Size(1092, 708);
             this.Controls.Add(this.deleteTeamMemberButton);
             this.Controls.Add(this.teamMembersLabel);
             this.Controls.Add(this.teamMembersListBox);
