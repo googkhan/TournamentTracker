@@ -29,9 +29,18 @@ namespace TrackerLibrary
         public string PlaceName { get; set; }
 
         /// <summary>
+        /// prize amount in tournament if zero it isnt used
+        /// </summary>
+        public decimal PrizeAmount { get; set; }
+
+
+        /// <summary>
         /// prize percent of team won from total fees
         /// </summary>
-        public double PrizePercent { get; set; }
+        public double PrizePercentage { get; set; }
+
+
+
 
         public PrizeModel()
         {
