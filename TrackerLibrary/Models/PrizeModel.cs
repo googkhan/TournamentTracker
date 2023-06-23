@@ -56,8 +56,6 @@ namespace TrackerLibrary
             double.TryParse(prizePercentage, out prizePercentageValue);
             PrizePercentage = prizePercentageValue;
 
-
-
         }
 
 

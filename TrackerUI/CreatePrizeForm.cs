@@ -41,7 +41,6 @@ namespace TrackerUI
                 prizeAmountValue.Text = "";
                 prizePercentageValue.Text = "0";
 
-
             }
             else
             {
@@ -70,6 +69,7 @@ namespace TrackerUI
                 output = false;
             }
 
+
             decimal prizeAmount = 0;
             double prizePercentage = 0;
 
@@ -90,7 +90,6 @@ namespace TrackerUI
             {
                 output = false;
             }
-
             return output;
         }
 
