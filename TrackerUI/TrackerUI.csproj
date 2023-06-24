@@ -235,11 +235,6 @@
     <Compile Include="TournamentDashboardForm.Designer.cs">
       <DependentUpon>TournamentDashboardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TournamentsDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TournamentsDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="TournamentViewerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,17 +277,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="TournamentsDataSet.xsc">
-      <DependentUpon>TournamentsDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="TournamentsDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TournamentsDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TournamentsDataSet.xss">
-      <DependentUpon>TournamentsDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

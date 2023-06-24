@@ -28,7 +28,7 @@ namespace TrackerLibrary.DataAccess
             //model.Id = 1;
 
             //TODO - there is error on cnnstring stuff on DESKTOP-9JGD8UL
-            // 'using' state prevent memory leaks, kinda closes connection after
+            // 'using' state prevent memory leaks, kinda closes connection after beside try/catch
 
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("Tournaments")))
             {
