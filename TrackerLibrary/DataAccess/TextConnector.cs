@@ -15,9 +15,18 @@ namespace TrackerLibrary.DataAccess
 
             // TODO wire up the CreatePrize for text files
 
-            model.Id = 1;
+            //model.Id = 1;
+            //return model;
 
-            return model;
+            //TODO - text connections tasks
+            // load text file
+            // convert text to List<PrizeModel>
+            // find max id
+            // add new record with new id
+            // convert prizes to list<string>
+            // save list<string> to text file
+
+
 
         }
     }
