@@ -1,9 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+
+//TODO - text connections tasks
+// load text file
+// convert text to List<PrizeModel>
+// find max id
+// add new record with new id
+// convert prizes to list<string>
+// save list<string> to text file
 
 namespace TrackerLibrary.DataAccess.TextConnector
 {
@@ -13,6 +23,37 @@ namespace TrackerLibrary.DataAccess.TextConnector
         {
             // like C:\\data\TournamentTracker\PrizeModels.csv path creator
             return $"{ConfigurationManager.AppSettings["filePath"]}\\{filename}";
+        }
+
+        public static List<string> LoadFile(this string file)
+        {
+            if (!File.Exists(file))
+            {
+                return new List<string>();
+            }
+
+            return File.ReadAllLines(file).ToList();
+        }
+
+        public static List<PrizeModel> ConvertToPrizeModels(this List<string> lines)
+        {
+            List<PrizeModel> output = new List<PrizeModel>();
+
+            foreach (string line in lines)
+            {
+                string[] cols = line.Split(',');
+
+                PrizeModel p = new PrizeModel();
+                p.Id = int.Parse(cols[0]);
+                p.PlaceNumber = int.Parse(cols[1]);
+                p.PlaceName = cols[2];
+                p.PrizeAmount = decimal.Parse(cols[3]);
+                p.PrizePercentage = double.Parse(cols[4]);
+
+                output.Add(p);
+
+            }
+            return output;
         }
     }
 }
