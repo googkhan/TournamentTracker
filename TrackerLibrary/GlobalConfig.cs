@@ -10,25 +10,25 @@ namespace TrackerLibrary
 {
     public static class GlobalConfig
     {
-        public static List<IDataConnection> Connections { get; private set; } = new List<IDataConnection>();
-        public static void InitializeConnections(bool database, bool textFiles)
+        public static IDataConnection Connections { get; private set; }
+        public static void InitializeConnections(string connectionType)
         {
             //Connections = new List<IDataConnections>(); // dotnet 6dan oncesi icin boyle imiş
             
-            if(database)
+            if(connectionType == "sql")
             {
                 // TODO set up the sql connector properly
 
                 SqlConnector sql = new SqlConnector();
-                Connections.Add(sql);
+                Connections = sql;
             }
 
-            if(textFiles)
+            else if(connectionType == "text")
             {
                 // TODO create text connection ex fileio
 
                 TextConnector text = new TextConnector();
-                Connections.Add(text);
+                Connections = text;
             }
         }
 
