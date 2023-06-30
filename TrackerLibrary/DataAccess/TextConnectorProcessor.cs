@@ -15,6 +15,9 @@ using System.Threading.Tasks;
 // convert prizes to list<string>
 // save list<string> to text file
 
+/// <summary>
+/// helpers namespace created for textconnector name-ambiguation
+/// </summary>
 namespace TrackerLibrary.DataAccess.TextHelpers
 {
     public static class TextConnectorProcessor
