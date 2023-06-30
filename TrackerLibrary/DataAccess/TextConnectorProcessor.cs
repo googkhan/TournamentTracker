@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 // convert prizes to list<string>
 // save list<string> to text file
 
-namespace TrackerLibrary.DataAccess.TextConnector
+namespace TrackerLibrary.DataAccess.TextHelpers
 {
     public static class TextConnectorProcessor
     {
@@ -55,5 +55,19 @@ namespace TrackerLibrary.DataAccess.TextConnector
             }
             return output;
         }
+
+        public static void SaveToPrizeFile(this List<PrizeModel> models, string fileName)
+        {
+            List<string> lines = new List<string>();
+
+            foreach (PrizeModel p in models)
+            {
+                lines.Add($"{p.Id},{p.PlaceNumber},{p.PlaceName},{p.PrizeAmount},{p.PrizePercentage}");
+            }
+
+            File.WriteAllLines(fileName.FullFilePath(), lines);
+        }
     }
 }
+
+
