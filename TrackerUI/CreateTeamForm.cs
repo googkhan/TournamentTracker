@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrackerLibrary;
 using TrackerLibrary.Models;
 
 namespace TrackerUI
@@ -43,6 +44,8 @@ namespace TrackerUI
                 p.LastName = lastNameValue.Text;
                 p.EmailAddress = emailValue.Text;
                 p.CellphoneNumber = phoneValue.Text;
+
+                GlobalConfig.Connection.CreatePerson(p);
             }
             else
             {

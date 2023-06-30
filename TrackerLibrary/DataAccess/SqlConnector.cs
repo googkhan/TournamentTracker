@@ -17,6 +17,29 @@ namespace TrackerLibrary.DataAccess
 {
     public class SqlConnector : IDataConnection
     {
+        public PersonModel CreatePerson(PersonModel model)
+        {
+            throw new NotImplementedException();
+            ////TODO - sql baglanmadi
+            //p.FirstName = firstNameValue.Text;
+            //p.LastName = lastNameValue.Text;
+            //p.EmailAddress = emailValue.Text;
+            //p.CellphoneNumber = phoneValue.Text;
+
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("Tournament")))
+            {
+                var p = new DynamicParameters();
+                p.Add("@FirstName", model.FirstName);
+                p.Add("@LastName", model.LastName);
+                p.Add("@EmailAddress", model.EmailAddress);
+                p.Add("@CellphoneNumber", model.CellphoneNumber);
+                p.Add("@id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+                return model;
+            }
+        }
+
         // TODO - make CreatePrize method actually save to db
 
         /// <summary>
