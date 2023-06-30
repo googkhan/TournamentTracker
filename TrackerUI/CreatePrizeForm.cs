@@ -33,6 +33,7 @@ namespace TrackerUI
 
                 GlobalConfig.Connection.CreatePrize(model);
 
+                //for clearing old form values
                 placeNumberValue.Text = "";
                 placeNameValue.Text = "";
                 prizeAmountValue.Text = "";
