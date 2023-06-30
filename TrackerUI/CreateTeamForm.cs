@@ -31,5 +31,30 @@ namespace TrackerUI
         {
 
         }
+
+        private void createMemberButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addTeamMemberButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void selectTeamMemberDropdown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deleteTeamMemberButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void teamMembersLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
