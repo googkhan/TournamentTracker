@@ -46,6 +46,13 @@ namespace TrackerUI
                 p.CellphoneNumber = phoneValue.Text;
 
                 GlobalConfig.Connection.CreatePerson(p);
+
+                //empty fields after save
+                firstNameValue.Text = "";
+                lastNameValue.Text = "";
+                emailValue.Text = "";
+                phoneValue.Text = "";
+
             }
             else
             {

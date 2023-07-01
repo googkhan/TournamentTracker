@@ -20,7 +20,7 @@ namespace TrackerLibrary.DataAccess
             //p.EmailAddress = emailValue.Text;
             //p.CellphoneNumber = phoneValue.Text;
 
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("Tournament")))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("Tournaments")))
             {
                 var p = new DynamicParameters();
                 p.Add("@FirstName", model.FirstName);
