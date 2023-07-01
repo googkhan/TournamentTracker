@@ -19,6 +19,19 @@ namespace TrackerLibrary.DataAccess
             //throw new NotImplementedException();
             //TODO text baglanmadi
             List<PersonModel> people = PersonsFile.FullFilePath().LoadFile().ConvertToPersonModels();
+
+            int currentId = 1;
+
+            if (people.Count > 0)
+            {
+                currentId = people.OrderByDescending(x => x.Id).First().Id + 1;
+            }
+
+            model.Id = currentId;
+            people.Add(model);
+
+            people.SaveToPerson
+        
         }
 
         public PrizeModel CreatePrize(PrizeModel model)

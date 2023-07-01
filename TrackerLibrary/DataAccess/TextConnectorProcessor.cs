@@ -66,6 +66,7 @@ namespace TrackerLibrary.DataAccess.TextHelpers
 
             foreach (string line in lines)
             {
+                //commas in space would be a problem
                 string[] cols = line.Split(',');
 
                 PersonModel p = new PersonModel();
@@ -78,6 +79,11 @@ namespace TrackerLibrary.DataAccess.TextHelpers
                 output.Add(p);
             }
             return output;
+        }
+
+        public static void SaveToPersonFile(this List<PersonModel> models, string fileName)
+        {
+
         }
 
         public static void SaveToPrizeFile(this List<PrizeModel> models, string fileName)
