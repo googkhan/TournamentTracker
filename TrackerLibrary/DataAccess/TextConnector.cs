@@ -12,11 +12,13 @@ namespace TrackerLibrary.DataAccess
     public class TextConnector : IDataConnection
     {
         private const string PrizesFile = "PrizeModels.csv";
+        private const string PersonsFile = "PersonModels.csv";
 
         public PersonModel CreatePerson(PersonModel model)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
             //TODO text baglanmadi
+            List<PersonModel> people = PersonsFile.FullFilePath().LoadFile().ConvertToPersonModels();
         }
 
         public PrizeModel CreatePrize(PrizeModel model)

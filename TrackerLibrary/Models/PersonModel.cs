@@ -35,6 +35,6 @@ namespace TrackerLibrary.Models
         /// <summary>
         /// the primary phone of the person
         /// </summary>
-        public string CellphoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
     }
 }

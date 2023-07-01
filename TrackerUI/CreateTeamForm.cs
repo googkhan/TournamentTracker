@@ -43,7 +43,7 @@ namespace TrackerUI
                 p.FirstName = firstNameValue.Text;
                 p.LastName = lastNameValue.Text;
                 p.EmailAddress = emailValue.Text;
-                p.CellphoneNumber = phoneValue.Text;
+                p.PhoneNumber = phoneValue.Text;
 
                 GlobalConfig.Connection.CreatePerson(p);
 
