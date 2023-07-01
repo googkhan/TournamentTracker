@@ -7,25 +7,18 @@ using System.Text;
 using System.Threading.Tasks;
 using TrackerLibrary.Models;
 
-//@PlaceNumber int,
-//@PlaceName nvarchar(50),
-//@PrizeAmount money,
-//@PrizePercentage float,
-//@id int = 0 output
-
 namespace TrackerLibrary.DataAccess
 {
     public class SqlConnector : IDataConnection
     {
         public PersonModel CreatePerson(PersonModel model)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
             ////TODO - sql baglanmadi
             //p.FirstName = firstNameValue.Text;
             //p.LastName = lastNameValue.Text;
             //p.EmailAddress = emailValue.Text;
             //p.CellphoneNumber = phoneValue.Text;
-
 
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("Tournament")))
             {
@@ -36,7 +29,13 @@ namespace TrackerLibrary.DataAccess
                 p.Add("@CellphoneNumber", model.CellphoneNumber);
                 p.Add("@id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
 
+                //TODO "dbo.spPeople_Insert" storedprocedure missing
+                connection.Execute("dbo.spPeople_Insert", p, commandType: CommandType.StoredProcedure);
+
+                model.Id = p.Get<int>("@id");
+                
                 return model;
+
             }
         }
 
@@ -49,6 +48,12 @@ namespace TrackerLibrary.DataAccess
         {
             //throw new NotImplementedException();
             //model.Id = 1;
+
+            //@PlaceNumber int,
+            //@PlaceName nvarchar(50),
+            //@PrizeAmount money,
+            //@PrizePercentage float,
+            //@id int = 0 output
 
             //TODO - there is error on cnnstring stuff on DESKTOP-9JGD8UL
             // 'using' state prevent memory leaks, kinda closes connection after beside try/catch
